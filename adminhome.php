@@ -38,7 +38,7 @@ $name = $b['name'];
 			<br />
 			<table border="0" class="table" cellpadding="10" cellspacing="10">
 				<tr>
-					<td><a href="adminnViewBook.php" class="Command">View Books</a></td>
+					<td><a href="adminViewBooks.php" class="Command">View Books</a></td>
 				<tr>
 					<td><a href="addBooks.php" class="Command">Add Books</a></td>
 				<tr>
