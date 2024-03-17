@@ -22,7 +22,7 @@ if (mysqli_num_rows($books_query) > 0) {
 ?>
 
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
