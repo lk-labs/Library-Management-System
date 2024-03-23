@@ -68,7 +68,7 @@ if ($aid == NULL || $_POST['pass'] == NULL) {
 			</form>
 			<br />
 			<br />
-			<a href="index.php" class="link">Main Page</a>
+			<a href="libsys.php" class="link">Main Page</a>
 			<br />
 			<br />
 

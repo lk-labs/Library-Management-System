@@ -2,7 +2,7 @@
 include("setting.php");
 session_start();
 if(!isset($_SESSION['sid'])) {
-    header("location:index.php");
+    header("location:libsys.php");
 }
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {

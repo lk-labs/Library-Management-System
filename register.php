@@ -104,7 +104,7 @@ if ($name == NULL || $email == NULL || $sem == NULL || $branch == NULL || $sid =
 				</table>
 			</form><br />
 			<br />
-			<a href="index.php" class="link">Go Back</a>
+			<a href="libsys.php" class="link">Go Back</a>
 			<br />
 			<br />
 

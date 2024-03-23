@@ -2,7 +2,7 @@
 include ("setting.php");
 session_start();
 if (!isset ($_SESSION['aid'])) {
-	header("location:index.php");
+	header("location:libsys.php");
 }
 $aid = $_SESSION['aid'];
 $a = mysqli_query($set, "SELECT * FROM admin WHERE aid='$aid'");

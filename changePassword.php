@@ -2,7 +2,7 @@
 include ("setting.php");
 session_start();
 if (!isset ($_SESSION['sid'])) {
-	header("location:index.php");
+	header("location:libsys.php");
 }
 $sid = $_SESSION['sid'];
 $a = mysqli_query($set, "SELECT * FROM students WHERE sid='$sid'");
