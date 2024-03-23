@@ -31,8 +31,8 @@ if ($aid == NULL || $_POST['pass'] == NULL) {
 
 <body>
 	<div id="banner">
-		<span class="head">Library Management System</span><br />
-		<marquee class="clg" direction="right" behavior="alternate" scrollamount="1">TECH VEGAN</marquee>
+		<span class="head">Librasys Connect</span><br />
+		<marquee class="clg" direction="right" behavior="alternate" scrollamount="1">TAstreamlined library management System</marquee>
 	</div>
 	<br />
 
