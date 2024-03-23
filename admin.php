@@ -32,7 +32,7 @@ if ($aid == NULL || $_POST['pass'] == NULL) {
 <body>
 	<div id="banner">
 		<span class="head">Librasys Connect</span><br />
-		<marquee class="clg" direction="right" behavior="alternate" scrollamount="1">TAstreamlined library management System</marquee>
+		<marquee class="clg" direction="right" behavior="alternate" scrollamount="1">A  streamlined library management System</marquee>
 	</div>
 	<br />
 

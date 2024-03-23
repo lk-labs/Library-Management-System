@@ -1,0 +1,160 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+li, a , button {
+    font-family:sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #edf0f1;
+    text-decoration: none;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding:10px 30px;
+    background-color: #061e96;
+}
+
+.logo{
+    cursor: pointer;
+}
+
+.nav_links{
+    list-style: none;
+}
+
+.nav_links li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+
+.nav_links li a {
+    transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover{
+    color: #2bff00;
+}
+
+button{
+    padding: 9px 25px;
+    background-color: #2bff00;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+}
+
+button:hover{
+    background-color: #2bff00;
+}
+
+#slider {
+    overflow: hidden;
+    max-width: 70%; /* Adjust the width as needed */
+    height: 70vh; /* Set the height to 50% of the viewport height */
+    margin: 50px auto 0; /* Center the slider horizontally and leave space at the top */
+}
+
+#slider figure {
+    position: relative;
+    width: 500%;
+    margin: 0;
+    left: 0;
+    animation: 20s slider infinite;
+    display: flex; /* Use flexbox for centering */
+    justify-content: center; /* Center the images horizontally */
+}
+
+#slider figure img {
+    /* Adjust the width and height of images */
+    width: auto; /* Set width to auto */
+    height: 100%; /* Make images fill the height of the slider */
+}
+
+@keyframes slider{
+    0%{
+        left: 0;
+    }
+    20%{
+        left: 0;
+    }
+    25%{
+        left: -100%;
+    }
+    45%{
+        left: -100%;
+    }
+    50%{
+        left: -200%;
+    }
+    70%{
+        left: -200%;
+    }
+    75%{
+        left: -300%;
+    }
+    95%{
+        left: -300%;
+    }
+    100%{
+        left: -400%;
+    }
+}
+
+/* Styles for the About Us section */
+
+.content {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.content h2 {
+    color: #2c3e50;
+    font-size: 36px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.content h3 {
+    color: #2980b9;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.content p {
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+
+
+.content ul li {
+    margin-bottom: 10px;
+    color: #555;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    list-style-type: disc;
+    padding-left: 20px;
+    font-family: 40;
+}
+
+/* Highlighted background for headings */
+.content h2::after,
+.content h3::after {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: #e74c3c;
+    margin-top: 10px;
+}
