@@ -1,6 +1,6 @@
 <?php
 include ("setting.php");
-include("Function.php");
+include ("Function.php");
 
 session_start();
 if (!isset ($_SESSION['aid'])) {
@@ -11,84 +11,143 @@ $a = mysqli_query($set, "SELECT * FROM admin WHERE aid='$aid'");
 $b = mysqli_fetch_array($a);
 $name = $b['name'];
 ?>
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>Library Management System</title>
-    <link href="stylesheet.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="stylesheet.css">
+    <style>
+        #logoutbtn {
+            background-color: red;
+        }
+        img{
+            width: 150px;
+            height: 100px;
+        }
+    </style>
 </head>
 
 <body>
-    <div id="banner">
-        <span class="head">Librasys Connect</span><br />
-        <marquee class="clg" direction="right" behavior="alternate" scrollamount="1">A streamlined library system
-        </marquee>
-    </div>
-    <br />
+    <div class="grid-container">
 
-    <div align="center">
-        <div id="wrapper">
-            <br />
-            <br />
-
-            <span class="SubHead">Welcome
-                <?php echo $name; ?>
-            </span>
-            <br />
-            <br />
-            
-            <table border="0" class="table" cellpadding="10" cellspacing="10">
-            <tr>
-                    <td><a href="returned_books.php" class="Command">View Returned books</a></td>
-                </tr>
-                <tr>
-                    <td><a href="adminViewBooks.php" class="Command">View Books</a></td>
-                </tr>
-                <tr>
-                    <td><a href="addBooks.php" class="Command">Add Books</a></td>
-                </tr>
+        <!-- Header -->
+        <header class="header">
+            <div>
+                <span class="Welcome">Welcome
+                    <?php echo $name; ?>
+                </span>
+            </div>
+        </header>
+        <!-- End Header -->
 
 
-                <tr>
-                    <td><a href="editBook.php" class="Command">Edit Books</a></td>
-                </tr>
-                <tr>
-                    <td><a href="deleteBook.php" class="Command">Delete Books</a></td>
-                </tr>
-                <tr>
-                    <td><a href="deleteUser.php" class="Command">Delete user</a></td>
-                </tr>
-                <tr>
-                    <td><a href="bookRequests.php" class="Command">Books Requests</a></td>
-                </tr>
-                <tr>
-                    <td><a href="issue.php" class="Command">Book Issue</a></td>
-                </tr>
-                <tr>
-                    <td><a href="changePasswordAdmin.php" class="Command">Change Password</a></td>
-                </tr>
-                <tr>
-                    <td><a href="logout.php" class="Command">Logout</a></td>
-                </tr>
+        <!-- Sidebar -->
+        <aside id="sidebar">
+            <div class="sidebar-title">
+                <div class="sidebar-brand">
+                    <span class="material-icons-outlined"><img src="images/logo.png" alt=""></span>
+                </div>
+            </div>
 
+            <ul class="sidebar-list">
+                <li class="sidebar-list-item">
+                    <a href="returned_books.php">
+                        <span class="material-icons-outlined">View Returned books</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="adminViewBooks.php">
+                        <span class="material-icons-outlined">View Books</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="addBooks.php">
+                        <span class="material-icons-outlined">Add Books</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="editBook.php">
+                        <span class="material-icons-outlined">Edit Books</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="deleteBook.php">
+                        <span class="material-icons-outlined">Delete Books</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="deleteUser.php">
+                        <span class="material-icons-outlined">Delete user</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="bookRequests.php">
+                        <span class="material-icons-outlined">Books Requests</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="issue.php">
+                        <span class="material-icons-outlined">Book Issue</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="changePasswordAdmin.php">
+                        <span class="material-icons-outlined">Change Password</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="logout.php">
+                        <span class="material-icons-outlined" id="logoutbtn">Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <!-- End Sidebar -->
 
-</table>
+        <!-- Main -->
+        <main class="main-container">
+            <div class="main-title">
+                <h2>DASHBOARD</h2>
+            </div>
 
+            <div class="main-cards">
 
+                <div class="card">
+                    <div class="card-inner">
+                        <h2>LIKES</h2>
+                    </div>
+                    <h1>4,021</h1>
+                </div>
 
+                <div class="card">
+                    <div class="card-inner">
+                        <h2>SUBSCRIBERS</h2>
+                    </div>
+                    <h1>8,731</h1>
+                </div>
 
+                <div class="card">
+                    <div class="card-inner">
+                        <h2>FOLLOWERS</h2>
+                    </div>
+                    <h1>3,841</h1>
+                </div>
 
+                <div class="card">
+                    <div class="card-inner">
+                        <h2>MESSAGES</h2>
+                    </div>
+                    <h1>1,962</h1>
+                </div>
 
+            </div>
+        </main>
 
-            <br />
-            <br />
-
-            <br />
-            <br />
-
-        </div>
     </div>
 </body>
 
