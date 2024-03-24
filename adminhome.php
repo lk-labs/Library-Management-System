@@ -119,32 +119,35 @@ $name = $b['name'];
 
                 <div class="card">
                     <div class="card-inner">
-                        <h2>LIKES</h2>
+                        <h2>BOOKS TOTAL</h2>
                     </div>
                     <h1>4,021</h1>
                 </div>
-
                 <div class="card">
                     <div class="card-inner">
-                        <h2>SUBSCRIBERS</h2>
+                        <h2>STUDENT TOTAL</h2>
+                    </div>
+                    <h1>1,962</h1>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <h2>REQUESTED BOOKS</h2>
+                    </div>
+                    <h1>1,962</h1>
+                </div>
+                <div class="card">
+                    <div class="card-inner">
+                        <h2>AUTHORS TOTAL</h2>
                     </div>
                     <h1>8,731</h1>
                 </div>
 
                 <div class="card">
                     <div class="card-inner">
-                        <h2>FOLLOWERS</h2>
+                        <h2>RETURNED BOOK</h2>
                     </div>
                     <h1>3,841</h1>
                 </div>
-
-                <div class="card">
-                    <div class="card-inner">
-                        <h2>MESSAGES</h2>
-                    </div>
-                    <h1>1,962</h1>
-                </div>
-
             </div>
         </main>
 

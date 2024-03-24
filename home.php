@@ -10,55 +10,90 @@ $b = mysqli_fetch_array($a);
 $name = $b['name'];
 ?>
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<title>Library Management System</title>
-	<link href="stylesheet.css" rel="stylesheet" type="text/css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard</title>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="stylesheet.css">
+    <style>
+        #logoutbtn {
+            background-color: red;
+        }
+        img{
+            width: 150px;
+            height: 100px;
+        }
+    </style>
 </head>
 
 <body>
-	<div id="banner">
-		<span class="head">Librasys connect</span><br />
-		<marquee class="clg" direction="right" behavior="alternate" scrollamount="1">A streamlined library management
-		</marquee>
-	</div>
-	<br />
+    <div class="grid-container">
 
-	<div align="center">
-		<div id="wrapper">
-			<br />
-			<br />
+        <!-- Header -->
+        <header class="header">
+            <div>
+                <span class="Welcome">Welcome
+                    <?php echo $name; ?>
+                </span>
+            </div>
+        </header>
+        <!-- End Header -->
 
-			<span class="SubHead">Welcome
-				<?php echo $name; ?>
-			</span>
-			<br />
-			<br />
-			<table border="0" class="table" cellpadding="10" cellspacing="10">
-				<tr>
-					<td><a href="viewBook.php" class="Command">View Book</a></td>
-				<tr>
-					<td><a href="issueBook.php" class="Command">request Book</a></td>
-					<td><a href="request.php" class="Command">Request New Books</a></td>
-				</tr>
-				<tr>
-					<td><a href="changePassword.php" class="Command">Change Password</a></td>
-					<td><a href="viewProfile.php" class="Command">view profile</a></td>
-				</tr>
-				<td><a href="logout.php" class="Command">Logout</a></td>
-				</tr>
 
-			</table>
-			<br />
-			<br />
+        <!-- Sidebar -->
+        <aside id="sidebar">
+            <div class="sidebar-title">
+                <div class="sidebar-brand">
+                    <span class="material-icons-outlined"><img src="images/logo.png" alt=""></span>
+                </div>
+            </div>
 
-			<br />
-			<br />
+            <ul class="sidebar-list">
+                <li class="sidebar-list-item">
+                    <a href="viewBook.php">
+                        <span class="material-icons-outlined">View Book</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="issueBook.php">
+                        <span class="material-icons-outlined">Request Book</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="request.php">
+                        <span class="material-icons-outlined">Request New Books</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="changePassword.php">
+                        <span class="material-icons-outlined">Change Password</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="viewProfile.php">
+                        <span class="material-icons-outlined">view profile</span>
+                    </a>
+                </li>
+                <li class="sidebar-list-item">
+                    <a href="logout.php">
+                        <span class="material-icons-outlined" id="logoutbtn">Logout</span>
+                    </a>
+                </li>
+            </ul>
+        </aside>
+        <!-- End Sidebar -->
 
-		</div>
-	</div>
+        <!-- Main -->
+        <main class="main-container">
+            <div class="main-title">
+                <h2>USER DASHBOARD</h2>
+            </div>
+        </main>
+
+    </div>
 </body>
 
 </html>
